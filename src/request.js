@@ -2,10 +2,8 @@ import config from './config';
 
 const sendError = (event, eventType = 'error') => {
   const req = new XMLHttpRequest();
-  console.log(event)
   const host = config.get().instance;
   const slug = '/logging/' + eventType;
-
   req.open('POST', host + slug, eventType === 'error');
   req.setRequestHeader('Content-Type', 'application/json');
   req.send(JSON.stringify(event));
@@ -16,6 +14,7 @@ const sendError = (event, eventType = 'error') => {
           'failed to send event with error:', this.statusText);
     }
   }
+    config.serveTest(event, eventType); 
 };
 
 

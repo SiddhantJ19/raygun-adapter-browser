@@ -1,5 +1,4 @@
 import broker from './broker';
-import constants from './constants';
 import userInteractions from './userInteractions';
 
 
@@ -17,7 +16,7 @@ const enableErrorListener = () => {
 };
 
 const enableUserInteractionsListener = () => {
-  const focusableElements = constants.focusableElements;
+  const focusableElements = ['button', 'details', 'input', 'iframe', 'select', 'textarea'];
 
   const focusInListener = (e) => {
     const tagName = e.target.tagName.toLowerCase();

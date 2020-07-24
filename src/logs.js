@@ -7,6 +7,9 @@ const logs = () => {
     if (typeof log !== 'string') {
       return;
     }
+    if (log.length >= 1000) {
+      log = log.slice(0, 990) + '...';
+    }
 
     logs.push({timestamp: timestamp.generateUTCInSeconds(), type: 'log', log});
 

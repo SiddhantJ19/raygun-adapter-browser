@@ -1,12 +1,12 @@
 import logs from './logs';
 
 const enableAll = () => {
-    // const log = console.log.bind(console);
+    const log = console.log.bind(console);
     
-    // console.log = (...args) => {
-    //     logs.add(args.join(' '));
-    //     log(...args);
-    // };
+    console.log = (...args) => {
+        logs.add(args.join(' '));
+        log(...args);
+    };
     
     const info = console.info.bind(console);
     
