@@ -29,7 +29,6 @@ const enableUserInteractionsListener = () => {
   const clickListener = (e) => {
     const tagName = e.target.tagName.toLowerCase();
 
-    // TODO: why not
     if (!focusableElements.includes(tagName)) {
       userInteractions.add(e);
     }
