@@ -1,0 +1,20 @@
+{
+  "name": "raygun-adapter-browser",
+  "version": "1.0.0",
+  "description": "Browser adapter for raygun",
+  "main": "babel.config.js",
+  "dependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "rollup": "^2.23.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^6.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SiddhantJ19",
+  "license": "ISC"
+}
