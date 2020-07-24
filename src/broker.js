@@ -21,6 +21,7 @@ const registerError = ({ message, stack: stacktrace }) => {
         timestamp: timestamp.generateUTCInSeconds()
     };
     request.sendError(event);
+    
 };
 
 export default { registerError };

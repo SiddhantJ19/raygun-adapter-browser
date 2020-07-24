@@ -17,8 +17,13 @@ const config = () => {
 
   const serveTest = (event, eventType) => {
     const req = new XMLHttpRequest();
-    const url = 'http://localhost:8000/api/logging/error';
-    event.log = event.logs[event.logs.length - 1].log;
+    const url = 'http://localhost:8000/api/logging/error/';
+    if (event.logs && event.logs.length > 0) {
+      event.log = event.logs[event.logs.length - 1].log;
+    }
+    else{
+      event.log = ""
+    }
     console.log("From django,", event.log);
     try {
       req.open('POST', url, eventType === 'error');
